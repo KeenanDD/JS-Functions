@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+    <div id="out">
+
+    </div>
+
+<script>
+//title
+function toDo () {
+  let header = "<h1>TO-DO</h1>" + "<br />";
+      header += "<hr />" + "<br />";
+  let button = "<button onClick='dataEntry()'>Enter Tasks</button>";
+document.getElementById('out').innerHTML = header + button + "<br />";
+}
+toDo();
+
+//button
+function dataEntry() {
+  addToDos();
+}
+//list
+  var list= [];
+function addToDos(toDoList) {
+  let listItem = "";
+  while ( listItem != "/END") {
+  listItem = prompt("What do you need to do today? Enter /END to publish list.")
+      if(listItem != "/END"){
+        list.push(listItem);
+    }
+      else if (listItem = "/END") {
+        document.getElementById('out').innerHTML += "<p>" + list.join('<p>  </p> <br />') + "</p>";
+      }
+  }
+}
+</script>
+  </body>
+</html>

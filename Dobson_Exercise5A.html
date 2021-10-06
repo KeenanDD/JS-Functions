@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+    <div id="out">
+
+    </div>
+    <br />
+    <div id="out2">
+
+    </div>
+
+<script>
+let z = "*"
+for(var x=1;x<=10;x++) {
+document.getElementById('out').innerHTML += (z.repeat(x) + "<br/>");
+}
+for(var i=9; i>=1; i--) {
+document.getElementById('out').innerHTML += (z.repeat(i) + "<br/>");
+}
+</script>
+<script>
+let n = 6;
+let c = 4;
+let str = "";
+for(var s = 0; s < c; s++) {
+  for(var j = 0; j < n; j++){
+    str += "*-";
+  }
+  str += "\n" + "<br />";
+}
+document.getElementById('out2').innerHTML += (str);
+</script>
+  </body>
+</html>

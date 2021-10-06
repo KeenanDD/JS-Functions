@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+<div id="out"></div>
+
+    <script>
+   let factor =  prompt("Enter a number between 1 and 10");
+   let output = "";
+     function init(){
+       const maxValue = 100;
+       const minValue = 0;
+
+       for(let x = maxValue; x > minValue; x--){
+          if(x % factor == 0) {
+           output += x;
+           output += "<br/>";
+         }
+       }
+     }
+        init();
+document.getElementById("out").innerHTML = "Factors of " + factor + ":<br/> ";
+document.getElementById("out").innerHTML += output;
+
+</script>
+
+
+  </body>
+</html>

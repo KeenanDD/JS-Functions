@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+    <div id="out">
+
+    </div>
+
+<script>
+
+var name1 = prompt ("What is your name?");
+var name2 = prompt ("What is your pet's name?");
+var verb1 = prompt ("enter an action verb");
+var verb2 = prompt ("enter a continuous verb");
+var verb3 = prompt ("enter a past continuous verb");
+var adj1 = prompt ("enter an adjective");
+var adj2 = prompt ("enter annother adjective");
+var adj3 = prompt ("enter a third adjective");
+
+var story = ("One day a " + adj3 + " person named " + name1 + " was " + verb2 + " when they met " + name2 + ". 'where are you going?' asked " + name2 + " 'I'm going to visit my " + adj1 + " mother and "
++ verb1 + " her. 'That sounds great!' said " + name2 + " 'I was just " + verb3 + " myself, but I think I'll join you!'. They both went on their journey together and had a " + adj2 + " time.");
+
+document.getElementById('out').innerHTML = story;
+</script>
+  </body>
+</html>

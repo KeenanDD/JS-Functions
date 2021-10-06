@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+    <div id="out">
+
+    </div>
+    <div id ="score">
+
+    </div>
+    <div id ='topScores'>
+
+    </div>
+
+<script>
+var gpa = [];
+var gpaScore = "";
+	while(gpaScore !="XXX") {
+    gpaScore = prompt("Enter a GPA score, or XXX to stop")
+    if(gpaScore != "XXX"){
+      gpa.push(gpaScore);
+    }
+gpa.sort(function(a, b){return b - a});
+  }
+  var output = "<h2> Class GPA's</h2>";
+    var total = 0;
+      var length = gpa.length;
+   for (var i = 0; i < length; i++) {
+       output += gpa[i];
+       output += "<br />";
+        total += parseInt(gpa[i]);
+   }
+   var avg = total/gpa.length;
+   var average = "Class Average GPA: " + avg;
+
+document.getElementById('out').innerHTML += output + average;
+
+document.getElementById("score").innerHTML += "Top Score: " + topScore(gpa) + "<br />" + "Lowest Score: " + lowScore(gpa);
+function topScore(arr) {
+  return Math.max.apply(null, arr);
+}
+function lowScore(arr) {
+  return Math.min.apply(null, arr);
+}
+
+const above35 = gpa.filter(honourRoll);
+
+function honourRoll(value, index, array) {
+  return value > 3.4;
+}
+document.getElementById('topScores').innerHTML += "Highest Scores: " + above35;
+</script>
+  </body>
+</html>

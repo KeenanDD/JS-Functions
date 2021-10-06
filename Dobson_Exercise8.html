@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+    <div id="out">
+
+    </div>
+
+<script>
+
+let num1 = prompt("Enter a number between 1 and 100");
+let num2 = prompt("Enter annother number between 1 and 100");
+let op = prompt("Choose an operation, enter one of the following: + - * / %");
+function showResult() {
+  if (op == "+") {
+    alert(num1 + " + " + num2 + " = " + (parseInt(num1) + parseInt(num2)));
+  }
+    else if (op == "-") {
+      alert(num1 + " - " + num2 + " = " + (num1 - num2));
+    }
+    else if (op == "*") {
+      alert(num1 + " * " + num2 + " = " + (num1 * num2));
+    }
+    else if (op == "/") {
+    alert(num1 + " / " + num2 + " = " + (num1 / num2));
+    }
+    else if (op == "%") {
+      alert(num1 + " % " + num2 + " = " + (num1 % num2));
+    }
+  };
+  showResult();
+</script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+    <div id="out">
+
+    </div>
+
+<script>
+var operand1 = prompt("Enter a number between 1 and 1,000");
+var operand2 = prompt("Enter a number between 1 and 1,000");
+var output ="";
+
+output += "addition " + (parseInt(operand1) + parseInt(operand2));
+output += "<br/>";
+output += "subtraction " + (operand1 - operand2);
+output += "<br/>";
+output += "multiplication " + (operand1 * operand2);
+output += "<br/>";
+output +="equivilancy " + (operand1 == operand2);
+output += "<br/>";
+output += "less-than " + (operand1 < operand2);
+output += "<br/>";
+output += "remainder " + (operand1 % operand2);
+
+document.getElementById('out').innerHTML = output;
+
+</script>
+  </body>
+</html>

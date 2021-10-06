@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+    <div id="out">
+
+    </div>
+
+
+<script>
+let n = prompt("Enter number per row");
+let c = prompt("Enter number of rows");
+let str = "";
+for(var s = 0; s < c; s++) {
+  for(var j = 0; j < n; j++){
+    str += "*";
+  }
+  str += "\n" + "<br />";
+}
+document.getElementById('out').innerHTML += (str);
+</script>
+  </body>
+</html>
